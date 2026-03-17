@@ -69,7 +69,6 @@ void mergeSort(vector<pair<char,int>> &a,int l,int r){
 
 }
 
-// ---------------- BUILD HUFFMAN TREE ----------------
 
 Node* buildTree(vector<pair<char,int>> freqList){
 
@@ -94,7 +93,6 @@ Node* buildTree(vector<pair<char,int>> freqList){
     return pq.top();
 }
 
-// ---------------- GENERATE HUFFMAN CODES ----------------
 
 void generate(Node* root,string code,unordered_map<char,string> &mp){
 
@@ -107,7 +105,6 @@ void generate(Node* root,string code,unordered_map<char,string> &mp){
     generate(root->right,code+"1",mp);
 }
 
-// ---------------- COMPRESS FILE ----------------
 
 string compressFile(string inputFile,Node* &root){
 
@@ -146,7 +143,6 @@ string compressFile(string inputFile,Node* &root){
     return encoded;
 }
 
-// ---------------- DECOMPRESS ----------------
 
 string decompress(Node* root,string encoded){
 
@@ -171,7 +167,6 @@ string decompress(Node* root,string encoded){
     return decoded;
 }
 
-// ---------------- RABIN KARP ----------------
 
 void rabinKarp(string text,string pat){
 
@@ -220,7 +215,6 @@ long getFileSize(string filename)
     ifstream file(filename, ios::binary | ios::ate);
     return file.tellg();
 }
-// ---------------- MAIN ----------------
 
 int main(){
 
